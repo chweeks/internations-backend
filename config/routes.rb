@@ -5,4 +5,5 @@ InternationsBackend::Application.routes.draw do
     post   "/groups", to: "groups#create"
     delete "/users",  to: "users#destroy"
     delete "/groups", to: "groups#destroy"
+    get    "/test",   to: "users#test"
 end
