@@ -1,25 +1,25 @@
 class GroupsController < ApplicationController
 
   def index
-    @groups = Group.all
-    render json: @groups, status: :ok
+    groups = Group.all
+    render json: groups, status: :ok
   end
 
   def create
-    @group = Group.new(params[:group])
-    if @group.save
-      render json: @group, status: :created
+    group = Group.new(params[:group])
+    if group.save
+      render json: group, status: :created
     else
-      render json: @group.errors, status: :unprocessable_entity
+      render json: group.errors, status: :unprocessable_entity
     end
   end
 
   def show
-    render json: @group
+    render json: group
   end
 
   def destroy
-    @group.destroy
+    group.destroy
     head :no_content
   end
 end
