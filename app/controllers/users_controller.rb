@@ -22,4 +22,7 @@ class UsersController < ApplicationController
     @user.destroy
     head :no_content
   end
+
+  def test
+    render text: "hello chris"
 end
