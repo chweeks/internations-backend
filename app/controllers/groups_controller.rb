@@ -7,11 +7,11 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(params[:group])
-
     if @group.save
       render json: @group, status: :created
     else
       render json: @group.errors, status: :unprocessable_entity
+    end
   end
 
   def show
