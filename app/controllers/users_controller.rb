@@ -25,4 +25,5 @@ class UsersController < ApplicationController
 
   def test
     render text: "hello chris"
+  end
 end
